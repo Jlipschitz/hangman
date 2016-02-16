@@ -3,11 +3,10 @@ $( document ).ready(function() {
 var lettersGuessed = [];	// array for letters guessed
 var userInput; 						// gather user input for letter guessed
 var stickArray; 					// array for stick figure parts
-var storeWord; 						// function to generate words to be guessed
 var genWord;							// generate word from array
 var correct;							// count amount of correct guesses
-var userTries = 6;					  // how many tries the user is allowed
-
+var userTries = 6;				// how many tries the user is allowed
+var space = 2;								// store spaces in generated word
 // ************** HANGMAN FIGURE ***************** //
 // use strokestyle() to change color
 var canvas = document.getElementById("myCanvas");
@@ -108,18 +107,18 @@ $( "#clickGuess" ).click(function() {
    userTries--;
    console.log(userTries);
   }
-  
-  //game over
-  if(userTries === 0) {
+  //** GAME WON **
+  if( (genWord.length - space) === correct) {
+  //do something
+  }
+  //** GAME OVER **
+  if(userTries === -1) {
   console.log("GAMVE OVER");
   }
 
 
 
-  }// ********ends else statement************
-});
+  }// ******** ENDS ELSE STATEMENT ************
+});// ***ENDS CLICK ***
 
-
-
-
-}); //end 
+}); //***** END ALL *****
