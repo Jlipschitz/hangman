@@ -1,0 +1,22 @@
+button {
+	width: 100px;
+	height:40px;
+	font-size:1.3em;
+	background-color: #39c6c6;
+	font-family: sans-serif, serif;
+	opacity: 0.8;
+	color: white;
+}
+input {
+	width: 60px;
+	height: 40px;
+	font-size:30px;
+	text-align: center;
+}
+#displayWords p{
+	border: 1px solid #39c6c6;
+	height:100px;
+}
+#displayWords {
+	width:300px;
+}
