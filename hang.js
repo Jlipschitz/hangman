@@ -17,6 +17,7 @@ var paint = function(move1, move2, line1, line2) {
   ctx.beginPath();
   ctx.moveTo(move1, move2);
   ctx.lineTo(line1, line2);
+  ctx.strokeStyle="#006666";
   ctx.stroke();
 }
 
@@ -66,8 +67,6 @@ var rightLeg = function() {
 //create array for body parts
 stickArray = [rightLeg, leftLeg, leftArm, rightArm, stickBody, stickHead, baseStand];
 
-//Draw Stick Figure
-
 //********* WORD BANK AND USER INPUT ************* //
   function wordBank() {
   var storeWords1 = ["THE ", "ALL ", "THIS ", "HELLO ", "GOODBYE "];
@@ -86,9 +85,11 @@ $( "#clickGuess" ).click(function() {
   var userInput = $( "#inputLetter" ).val();
   
   if(userInput === "") { //*** DON'T RUN IF LETTER IS NULL || " " ***
-  	alert("Please enter a letter");  
+  	alert("Please enter a letter");
+    $("input[type=text]").val("");
     } else if(lettersGuessed.indexOf(userInput) !== -1) {
     alert("Please enter a letter not already used");
+    $("input[type=text]").val("");
     } else { //*****ONLY RUN IF USER ENTERS LETTER UPON CLICK ******
     
   lettersGuessed.push(userInput);
@@ -115,10 +116,25 @@ $( "#clickGuess" ).click(function() {
   if(userTries === -1) {
   console.log("GAMVE OVER");
   }
-
+   $( "#showLetters" ).append( userInput);//misguessed letters are being placed here
+	 $("input[type=text]").val("");
+	//*** IMPLEMENT RESET **** 
 
 
   }// ******** ENDS ELSE STATEMENT ************
 });// ***ENDS CLICK ***
 
+function blinker() {
+
+  if ($('input[type=text]').attr('placeholder')) {
+    // get the placeholder text
+    $('input[type=text]').attr('placeholder', '');
+  } else {
+    $('input[type=text]').attr('placeholder', 'A');
+  }
+
+  setTimeout(blinker, 1000);
+
+}
+blinker();
 }); //***** END ALL *****

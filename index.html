@@ -11,13 +11,16 @@
   </head>
 <body>
   <div id="wrapper">
-    <canvas id="myCanvas" width="300" height="300" style="border:1px solid #c3c3c3;">
+    <canvas id="myCanvas" width="300" height="300">
       Your browser does not support the canvas element.</canvas>
-    <h2>Let's play hangman!</h2>
+    <h1>Let's play hangman!</h1>
    <input type="text" id="inputLetter" maxlength="1" placeholder="A">
     <button id="clickGuess" type="submit" value="guess">GUESS</button>
      <div id="displayWords">
-       <p id="test">Misguessed letters are going here</p>
+       <h2>
+       Letters Guessed:
+       </h2>
+       <p id="showLetters" placeholder="Misguessed letters are going here"></p>
     </div>
   </div>
 </body>
