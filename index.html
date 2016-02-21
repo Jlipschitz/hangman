@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
     </script>
     <script type="text/javascript" src="hang.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Hangman</title>
-  </head>
+</head>
+
 <body>
-  <div id="wrapper">
-    <canvas id="myCanvas" width="300" height="300">
-      Your browser does not support the canvas element.</canvas>
-    <h1>Let's play hangman!</h1>
-   <input type="text" id="inputLetter" maxlength="1" placeholder="A">
-    <button id="clickGuess" type="submit" value="guess">GUESS</button>
-     <div id="displayWords">
-       <h2>
-       Letters Guessed:
-       </h2>
-       <p id="showLetters" placeholder="Misguessed letters are going here"></p>
+    <div id="wrapper">
+        <canvas id="myCanvas" width="300" height="300">
+            Your browser does not support the canvas element.</canvas>
+        <div id="divWords">
+            <h1>
+      Word to be Guessed:
+      </h1>
+            <p id="displayWords"></p>
+        </div>
+        <h1>Let's play hangman!</h1>
+        <input type="text" id="inputLetter" maxlength="1" placeholder="A">
+        <button id="clickGuess" type="submit" value="guess">GUESS</button>
+        <button id="clickReset" type="reset" value="reset">RESET</button>
+        <p id="gameAlerts"></p>
+        <p id="gameAlerts2"></p>
+        <div id="displayLetters">
+            <p id="headTag">
+                Letters Guessed:
+            </p>
+            <p id="showLetters" placeholder="Misguessed letters are going here"></p>
+        </div>
     </div>
-  </div>
 </body>
+
 </html>
