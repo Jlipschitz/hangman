@@ -11,4 +11,4 @@
 
 [3] Game ends when two conditions have been met: NO GUESSES LEFT OR USER GUESSES CORRECTLY
 
-JSFIDDLE: https://jsfiddle.net/Censored17/babwL222/72/
+JSFIDDLE: https://jsfiddle.net/Censored17/babwL222/73/
