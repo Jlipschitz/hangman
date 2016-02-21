@@ -4,9 +4,11 @@
 ## | _ _ _ _ _ _ _ | | _ _ _ _ _ |
 
 #### Rules:
-Guess a letter correctly -- letter is displayed in hidden word
+[1] Guess a letter correctly -- letter is displayed in hidden word
 
 
-Guess a letter incorrectly -- lose a life and one step closer to hanging the hangman!
+[2] Guess a letter incorrectly -- lose a life and one step closer to hanging the hangman!
+
+[3] Game ends when two conditions have been met: NO GUESSES LEFT OR USER GUESSES CORRECTLY
 
 JSFIDDLE: https://jsfiddle.net/Censored17/babwL222/72/
