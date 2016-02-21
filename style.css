@@ -101,7 +101,6 @@ input {
 
 canvas {
   float: left;
-  border:1px solid black;
 }
 
 #gameAlerts, #gameAlerts2 {
